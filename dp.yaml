@@ -3,7 +3,7 @@ services:
     build:
       dockerfile: ./Dockerfile
     volumes:
-      - keybr_data:~/.local/state/keybr
+      - keybr_data:/etc/keybr/state/keybr
       - ./.env:/etc/keybr/env
 #    ports:
 #      - 30044:3000
