@@ -1,0 +1,13 @@
+services:
+  keybr:
+    build:
+      dockerfile: ./Dockerfile
+    volumes:
+      - keybr_data:~/.local/state/keybr
+      - ./.env:/etc/keybr/env
+#    ports:
+#      - 30044:3000
+    restart: unless-stopped
+volumes:
+  keybr_data:
+  
